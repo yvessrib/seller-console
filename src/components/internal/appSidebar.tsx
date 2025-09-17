@@ -16,10 +16,12 @@ const items = [
   {
     title: "Leads",
     icon: UserPen,
+    href: "/"
   },
   {
     title: "Opportunities",
-    icon: BriefcaseBusiness
+    icon: BriefcaseBusiness,
+    href: "/opportunities"
   }
 ]
 
@@ -49,7 +51,7 @@ export function AppSidebar() {
                 {items.map((item) => (
                   <SidebarMenuItem key={item.title} className="text-zinc-900 text-2xl">
                     <SidebarMenuButton className="hover:bg-emerald-700 hover:text-white transition-all" asChild>
-                      <a>
+                      <a href={item.href}>
                         <item.icon className="h-6 w-6" />
                         <span className="text-base">{item.title}</span>
                       </a>

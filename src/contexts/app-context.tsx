@@ -1,23 +1,7 @@
 /* eslint-disable react-refresh/only-export-components */
 import { createContext, useContext, useEffect, useState } from "react"
 import fetchLeads from "../services/fakeApi"
-
-export type Lead = {
-  id: number
-  name: string
-  company: string
-  email: string
-  source: string
-  score: number
-  status: string
-}
-
-export type Opportunity = {
-  name: string
-  stage: string
-  amount: number
-  accountName: string
-}
+import { type Lead, type Opportunity } from "../types/app"
 
 type appContextType = {
   leads: Lead[]
@@ -34,13 +18,28 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
   const [opportunities, setOpportunities] = useState<Opportunity[]>([])
 
   useEffect(() => {
-    fetchLeads()
-      .then(setLeads)
+    const storedLeads = localStorage.getItem("leads")
+    if (storedLeads) {
+      setLeads(JSON.parse(storedLeads))
+    } else {
+      // primeira carga vem do fakeApi
+      fetchLeads().then((data) => {
+        setLeads(data)
+        localStorage.setItem("leads", JSON.stringify(data))
+      })
+    }
+
+    const storedOpportunities = localStorage.getItem("opportunities")
+    if (storedOpportunities) {
+      setOpportunities(JSON.parse(storedOpportunities))
+    }
   }, [])
 
   const getLeads = () => {
-    fetchLeads()
-      .then(setLeads)
+    fetchLeads().then((data) => {
+      setLeads(data)
+      localStorage.setItem("leads", JSON.stringify(data))
+    })
   }
 
   const createOpportunity = (opportunity: Opportunity) => {
@@ -50,13 +49,19 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
       ...opportunity
     }
 
-    setOpportunities((prev) => [...prev, addOpportunity])
+    setOpportunities((prev) => {
+      const updated = [...prev, addOpportunity]
+      localStorage.setItem("opportunities", JSON.stringify(updated))
+      return updated
+    })
   }
 
   const updateLead = (updated: Lead) => {
-    setLeads((prev) =>
-      prev.map((lead) => (lead.id === updated.id ? updated : lead))
-    )
+    setLeads((prev) => {
+      const newLeads = prev.map((lead) => lead.id === updated.id ? updated : lead)
+      localStorage.setItem("leads", JSON.stringify(newLeads))
+      return newLeads
+    })
   }
 
   return (

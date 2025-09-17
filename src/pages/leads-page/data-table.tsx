@@ -50,7 +50,7 @@ const globalFilterFn = <TData,>(
   return name.includes(search) || company.includes(search)
 }
 
-export function DataTable<TData, TValue>({
+export function LeadsTable<TData, TValue>({
   columns,
   data,
   onRowClick
@@ -132,7 +132,7 @@ export function DataTable<TData, TValue>({
                   data-state={row.getIsSelected() && "selected"}
                   className={`hover:cursor-pointer hover:bg-emerald-200 ${selectedRowId === row.id ? "bg-emerald-200" : ""}`}>
                   {row.getVisibleCells().map((cell) => (
-                    <TableCell key={cell.id}>
+                    <TableCell key={cell.id} >
                       {flexRender(cell.column.columnDef.cell, cell.getContext())}
                     </TableCell>
                   ))}

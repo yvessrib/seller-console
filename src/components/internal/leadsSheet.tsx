@@ -1,5 +1,5 @@
 import { Sheet, SheetHeader, SheetContent, SheetTitle, SheetFooter } from "../ui/sheet";
-import { type Lead } from "../../pages/leads-page/columns";
+import { type Lead } from "../../types/app";
 import { LeadForm } from "./leadForm";
 import { Button } from "../ui/button";
 import { ArrowRight } from "lucide-react";

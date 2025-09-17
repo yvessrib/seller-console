@@ -1,14 +1,6 @@
 import { Sheet, SheetHeader, SheetContent, SheetTitle } from "../ui/sheet";
-import { type Lead } from "../../pages/leads-page/columns";
+import { type Lead, type Opportunity } from "../../types/app";
 import { OpportunityForm } from "./opportunityForm";
-
-export type Opportunity = {
-  id: number,
-  name: string,
-  stage: string,
-  amount: number,
-  accountName: string,
-}
 
 interface OpportunitySheetProps {
   lead: Lead | null,

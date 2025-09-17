@@ -1,4 +1,4 @@
-import type { Lead } from "../../pages/leads-page/columns";
+import { type Lead, type Opportunity } from "../../types/app";
 import { Input } from "../ui/input";
 import { Select, SelectItem } from "../ui/select";
 import { SelectContent, SelectTrigger, SelectValue } from "@radix-ui/react-select";
@@ -7,8 +7,6 @@ import { Button } from "../ui/button";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Controller, useForm } from "react-hook-form";
-
-import { type Opportunity } from "./opportunitySheet";
 
 interface OpportunityFormProps {
   lead: Lead | null,
@@ -43,7 +41,7 @@ export function OpportunityForm({ lead, onCreate, onCancel }: OpportunityFormPro
 
   const onSubmit = (data: OpportunityFormData) => {
     if (!lead?.id) return console.log("Lead ID is missing")
-    onCreate({ ...lead, ...data })
+    onCreate({ ...data })
     reset()
   }
 

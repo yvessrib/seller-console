@@ -1,4 +1,4 @@
-import type { Lead } from "../pages/leads-page/columns"
+import { type Lead } from "../types/app"
 export default function fetchLeads(): Promise<Lead[]> {
   return new Promise((resolve) => {
     setTimeout(() => {

@@ -1,16 +1,7 @@
 import type { ColumnDef } from "@tanstack/react-table"
 import { ArrowDown } from "lucide-react"
 import { Button } from "../../components/ui/button"
-
-export type Lead = {
-  id: number,
-  name: string,
-  company: string,
-  email: string,
-  source: string,
-  score: number,
-  status: string
-}
+import { type Lead } from "../../types/app"
 
 export const columns: ColumnDef<Lead>[] = [
   {

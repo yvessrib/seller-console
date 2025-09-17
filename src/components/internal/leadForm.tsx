@@ -1,4 +1,4 @@
-import type { Lead } from "../../pages/leads-page/columns";
+import { type Lead } from "../../types/app";
 import { Input } from "../ui/input";
 import { Select, SelectItem } from "../ui/select";
 import { SelectContent, SelectTrigger, SelectValue } from "@radix-ui/react-select";

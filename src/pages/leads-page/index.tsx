@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { columns, type Lead } from "./columns";
-import { DataTable } from "./data-table";
+import { columns } from "./columns";
+import { LeadsTable } from "./data-table";
 import { LeadsSheet } from "../../components/internal/leadsSheet";
 import { OpportunitySheet  } from "../../components/internal/opportunitySheet";
 import { useAppContext } from "../../contexts/app-context";
+import { type Lead } from "../../types/app";
 
 export default function LeadsPage() {
 
@@ -25,7 +26,7 @@ export default function LeadsPage() {
 
   return (
     <div>
-      <DataTable columns={columns} data={leads} onRowClick={(lead) => {
+      <LeadsTable columns={columns} data={leads} onRowClick={(lead) => {
         setSelectedLead(lead)
         setIsLeadSheetOpen(true)
       }}/>
