@@ -1,69 +1,61 @@
-# React + TypeScript + Vite
+# 🛍️ Mini Seller Console
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight console to triage **Leads** and convert them into **Opportunities**.  
+Built with **React + Tailwind CSS** and follows the requirements of the coding challenge.
 
-Currently, two official plugins are available:
+## 📌 Features (MVP)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+✅ **Leads List**
+- Loads leads from a local JSON file.
+- Fields: `id`, `name`, `company`, `email`, `source`, `score`, `status`.
+- Features: **search** (name/company), **filter** (status), **sort** (score descending and ID descending *extra*)
 
-## Expanding the ESLint configuration
+✅ **Lead Detail Panel**
+- Click a row to open a slide-over panel.
+- Inline edit **status** and **email** (with email validation).
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+✅ **Convert to Opportunity**
+- "Convert Lead" button to open a slide-over panel.
+- Creates an Opportunity with: `id`, `name`, `stage`, `amount (optional)`, `accountName`.
+- Opportunities displayed in a simple table.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+✅ **Extras**
+- Responsive layout (desktop → mobile)
+- Persisted **filter/sort** in `localStorage`
+- Feedback toaster on updating lead and creating opportunity
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+### 1️⃣ Clone the Repository
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/your-username/mini-seller-console.git
+cd mini-seller-console
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2️⃣ Install Dependencies 
+```bash
+npm install
+```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 3️⃣ Run the Development Script
+```bash
+npm run dev
+```
+Open http://localhost:5173/ in your browser.
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 📂 Project Structure
+```bash
+  src/
+ ├─ components/
+ │   ├─ ui/                     # Reusable UI components [shadcn] (buttons, tables, sidebar, etc.)
+ │   └─ internal/            # App-specific components (AppSidebar, LeadDetailPanel)
+ ├─ data/
+ │   └─ leads.json          # Local leads data source
+ ├─ pages/
+ │   ├─ layout/               # Layout of the aplication
+ │   ├─ leads-page/        # Leads table 
+ │   └─ opportunities-page/ # Opportunities table
+ ├─ context/                   # Context API for the aplication
+ ├─ types/                      # Leads and Opportunities Type
+ └─ main.tsx                  # App entry point
+ └─ app.tsx                    # Routing for the App
 ```
