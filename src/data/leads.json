@@ -1,0 +1,920 @@
+[
+  {
+    "id": 1,
+    "name": "Alice Johnson",
+    "company": "TechCorp",
+    "email": "alice.johnson@techcorp.com",
+    "source": "Website",
+    "score": 92,
+    "status": "Qualified"
+  },
+  {
+    "id": 2,
+    "name": "Bob Smith",
+    "company": "FinServ",
+    "email": "bob.smith@finserv.com",
+    "source": "Referral",
+    "score": 78,
+    "status": "Contacted"
+  },
+  {
+    "id": 3,
+    "name": "Carla Mendes",
+    "company": "Inova SA",
+    "email": "carla.mendes@inovasa.com",
+    "source": "LinkedIn",
+    "score": 85,
+    "status": "New"
+  },
+  {
+    "id": 4,
+    "name": "David Lee",
+    "company": "GlobalSoft",
+    "email": "david.lee@globalsoft.com",
+    "source": "Email Campaign",
+    "score": 60,
+    "status": "Lost"
+  },
+  {
+    "id": 5,
+    "name": "Emily Davis",
+    "company": "HealthPlus",
+    "email": "emily.davis@healthplus.com",
+    "source": "Conference",
+    "score": 88,
+    "status": "Qualified"
+  },
+  {
+    "id": 6,
+    "name": "Felipe Santos",
+    "company": "StartNow",
+    "email": "felipe.santos@startnow.com",
+    "source": "Website",
+    "score": 73,
+    "status": "Contacted"
+  },
+  {
+    "id": 7,
+    "name": "Grace Miller",
+    "company": "EduPro",
+    "email": "grace.miller@edupro.com",
+    "source": "LinkedIn",
+    "score": 95,
+    "status": "Qualified"
+  },
+  {
+    "id": 8,
+    "name": "Hugo Pereira",
+    "company": "LogiTrans",
+    "email": "hugo.pereira@logitrans.com",
+    "source": "Referral",
+    "score": 67,
+    "status": "New"
+  },
+  {
+    "id": 9,
+    "name": "Isabel Chen",
+    "company": "MediCare",
+    "email": "isabel.chen@medicare.com",
+    "source": "Conference",
+    "score": 81,
+    "status": "Contacted"
+  },
+  {
+    "id": 10,
+    "name": "James White",
+    "company": "Innovate",
+    "email": "james.white@innovate.com",
+    "source": "Email Campaign",
+    "score": 55,
+    "status": "Lost"
+  },
+  {
+    "id": 11,
+    "name": "Karen Black",
+    "company": "CyberSec",
+    "email": "karen.black@cybersec.com",
+    "source": "Website",
+    "score": 94,
+    "status": "Qualified"
+  },
+  {
+    "id": 12,
+    "name": "Leo Martin",
+    "company": "GameCorp",
+    "email": "leo.martin@gamecorp.com",
+    "source": "Referral",
+    "score": 79,
+    "status": "New"
+  },
+  {
+    "id": 13,
+    "name": "Mia Wong",
+    "company": "FutureTech",
+    "email": "mia.wong@futuretech.com",
+    "source": "LinkedIn",
+    "score": 87,
+    "status": "Qualified"
+  },
+  {
+    "id": 14,
+    "name": "Noah Brown",
+    "company": "EduTech",
+    "email": "noah.brown@edutech.com",
+    "source": "Website",
+    "score": 72,
+    "status": "Contacted"
+  },
+  {
+    "id": 15,
+    "name": "Olivia Taylor",
+    "company": "TransLog",
+    "email": "olivia.taylor@translog.com",
+    "source": "Conference",
+    "score": 68,
+    "status": "Lost"
+  },
+  {
+    "id": 16,
+    "name": "Paul Jones",
+    "company": "AgriBiz",
+    "email": "paul.jones@agribiz.com",
+    "source": "Referral",
+    "score": 91,
+    "status": "Qualified"
+  },
+  {
+    "id": 17,
+    "name": "Quinn Miller",
+    "company": "ChemSol",
+    "email": "quinn.miller@chemsol.com",
+    "source": "Email Campaign",
+    "score": 83,
+    "status": "Contacted"
+  },
+  {
+    "id": 18,
+    "name": "Rachel Green",
+    "company": "DesignCo",
+    "email": "rachel.green@designco.com",
+    "source": "LinkedIn",
+    "score": 65,
+    "status": "New"
+  },
+  {
+    "id": 19,
+    "name": "Sam Carter",
+    "company": "AutoMech",
+    "email": "sam.carter@automech.com",
+    "source": "Website",
+    "score": 90,
+    "status": "Qualified"
+  },
+  {
+    "id": 20,
+    "name": "Tina Evans",
+    "company": "WebDev",
+    "email": "tina.evans@webdev.com",
+    "source": "Conference",
+    "score": 75,
+    "status": "Contacted"
+  },
+  {
+    "id": 21,
+    "name": "Victor Rossi",
+    "company": "FinCorp",
+    "email": "victor.rossi@fincorp.com",
+    "source": "Referral",
+    "score": 86,
+    "status": "Qualified"
+  },
+  {
+    "id": 22,
+    "name": "Wendy Lee",
+    "company": "HealthSys",
+    "email": "wendy.lee@healthsys.com",
+    "source": "LinkedIn",
+    "score": 62,
+    "status": "Lost"
+  },
+  {
+    "id": 23,
+    "name": "Xavier Gomez",
+    "company": "DataHub",
+    "email": "xavier.gomez@datahub.com",
+    "source": "Website",
+    "score": 93,
+    "status": "Qualified"
+  },
+  {
+    "id": 24,
+    "name": "Yara Silva",
+    "company": "RetailCorp",
+    "email": "yara.silva@retailcorp.com",
+    "source": "Email Campaign",
+    "score": 70,
+    "status": "Contacted"
+  },
+  {
+    "id": 25,
+    "name": "Zane Peterson",
+    "company": "TechSolutions",
+    "email": "zane.peterson@techsolutions.com",
+    "source": "Conference",
+    "score": 89,
+    "status": "New"
+  },
+  {
+    "id": 26,
+    "name": "Ava Rodriguez",
+    "company": "CreativeMinds",
+    "email": "ava.rodriguez@creativeminds.com",
+    "source": "Referral",
+    "score": 80,
+    "status": "Qualified"
+  },
+  {
+    "id": 27,
+    "name": "Ben Clark",
+    "company": "AutoMotive",
+    "email": "ben.clark@automotive.com",
+    "source": "LinkedIn",
+    "score": 64,
+    "status": "Lost"
+  },
+  {
+    "id": 28,
+    "name": "Chloe Adams",
+    "company": "EnergyCo",
+    "email": "chloe.adams@energyco.com",
+    "source": "Website",
+    "score": 96,
+    "status": "Qualified"
+  },
+  {
+    "id": 29,
+    "name": "Daniel Kim",
+    "company": "SecureSys",
+    "email": "daniel.kim@securesys.com",
+    "source": "Conference",
+    "score": 76,
+    "status": "Contacted"
+  },
+  {
+    "id": 30,
+    "name": "Ella Fisher",
+    "company": "MediaWorks",
+    "email": "ella.fisher@mediaworks.com",
+    "source": "Email Campaign",
+    "score": 84,
+    "status": "New"
+  },
+  {
+    "id": 31,
+    "name": "Frank Evans",
+    "company": "BizSol",
+    "email": "frank.evans@bizsol.com",
+    "source": "Referral",
+    "score": 71,
+    "status": "Contacted"
+  },
+  {
+    "id": 32,
+    "name": "Georgia Hall",
+    "company": "GlobalEdu",
+    "email": "georgia.hall@globaledu.com",
+    "source": "LinkedIn",
+    "score": 97,
+    "status": "Qualified"
+  },
+  {
+    "id": 33,
+    "name": "Harry King",
+    "company": "GreenTech",
+    "email": "harry.king@greentech.com",
+    "source": "Website",
+    "score": 69,
+    "status": "Lost"
+  },
+  {
+    "id": 34,
+    "name": "Irene Scott",
+    "company": "MedPlus",
+    "email": "irene.scott@medplus.com",
+    "source": "Conference",
+    "score": 82,
+    "status": "Qualified"
+  },
+  {
+    "id": 35,
+    "name": "Jack Turner",
+    "company": "SoftWorks",
+    "email": "jack.turner@softworks.com",
+    "source": "Email Campaign",
+    "score": 74,
+    "status": "New"
+  },
+  {
+    "id": 36,
+    "name": "Kylie Adams",
+    "company": "GameOn",
+    "email": "kylie.adams@gameon.com",
+    "source": "Referral",
+    "score": 88,
+    "status": "Qualified"
+  },
+  {
+    "id": 37,
+    "name": "Liam Carter",
+    "company": "RetailNext",
+    "email": "liam.carter@retailnext.com",
+    "source": "LinkedIn",
+    "score": 58,
+    "status": "Lost"
+  },
+  {
+    "id": 38,
+    "name": "Monica White",
+    "company": "FoodCorp",
+    "email": "monica.white@foodcorp.com",
+    "source": "Website",
+    "score": 95,
+    "status": "Qualified"
+  },
+  {
+    "id": 39,
+    "name": "Nathan Hill",
+    "company": "EduLink",
+    "email": "nathan.hill@edulink.com",
+    "source": "Conference",
+    "score": 63,
+    "status": "Contacted"
+  },
+  {
+    "id": 40,
+    "name": "Paige Bennett",
+    "company": "TransGlobal",
+    "email": "paige.bennett@transglobal.com",
+    "source": "Email Campaign",
+    "score": 77,
+    "status": "New"
+  },
+  {
+    "id": 41,
+    "name": "Oscar Lewis",
+    "company": "InvestCo",
+    "email": "oscar.lewis@investco.com",
+    "source": "Referral",
+    "score": 90,
+    "status": "Qualified"
+  },
+  {
+    "id": 42,
+    "name": "Quentin Harris",
+    "company": "MarketPros",
+    "email": "quentin.harris@marketpros.com",
+    "source": "LinkedIn",
+    "score": 81,
+    "status": "Contacted"
+  },
+  {
+    "id": 43,
+    "name": "Renee Clark",
+    "company": "BioGen",
+    "email": "renee.clark@biogen.com",
+    "source": "Website",
+    "score": 70,
+    "status": "Lost"
+  },
+  {
+    "id": 44,
+    "name": "Steve Davis",
+    "company": "LogiCorp",
+    "email": "steve.davis@logicorp.com",
+    "source": "Conference",
+    "score": 94,
+    "status": "Qualified"
+  },
+  {
+    "id": 45,
+    "name": "Tina Adams",
+    "company": "InnovateNow",
+    "email": "tina.adams@innovatenow.com",
+    "source": "Email Campaign",
+    "score": 66,
+    "status": "New"
+  },
+  {
+    "id": 46,
+    "name": "Vincent Scott",
+    "company": "FutureLabs",
+    "email": "vincent.scott@futurelabs.com",
+    "source": "Referral",
+    "score": 85,
+    "status": "Qualified"
+  },
+  {
+    "id": 47,
+    "name": "Wanda Ross",
+    "company": "EduPlus",
+    "email": "wanda.ross@eduplus.com",
+    "source": "LinkedIn",
+    "score": 72,
+    "status": "Contacted"
+  },
+  {
+    "id": 48,
+    "name": "Yuri Kim",
+    "company": "SmartHome",
+    "email": "yuri.kim@smarthome.com",
+    "source": "Website",
+    "score": 98,
+    "status": "Qualified"
+  },
+  {
+    "id": 49,
+    "name": "Zoe Pires",
+    "company": "FinTech",
+    "email": "zoe.pires@fintech.com",
+    "source": "Conference",
+    "score": 79,
+    "status": "New"
+  },
+  {
+    "id": 50,
+    "name": "Aaron White",
+    "company": "HealthFirst",
+    "email": "aaron.white@healthfirst.com",
+    "source": "Email Campaign",
+    "score": 61,
+    "status": "Lost"
+  },
+  {
+    "id": 51,
+    "name": "Brenda Hill",
+    "company": "ITSolutions",
+    "email": "brenda.hill@itsolutions.com",
+    "source": "Referral",
+    "score": 87,
+    "status": "Qualified"
+  },
+  {
+    "id": 52,
+    "name": "Carlos Rivera",
+    "company": "DesignPro",
+    "email": "carlos.rivera@designpro.com",
+    "source": "LinkedIn",
+    "score": 73,
+    "status": "Contacted"
+  },
+  {
+    "id": 53,
+    "name": "Diane Nelson",
+    "company": "AutoGen",
+    "email": "diane.nelson@autogen.com",
+    "source": "Website",
+    "score": 91,
+    "status": "Qualified"
+  },
+  {
+    "id": 54,
+    "name": "Ethan Lopez",
+    "company": "EduStart",
+    "email": "ethan.lopez@edustart.com",
+    "source": "Conference",
+    "score": 65,
+    "status": "Lost"
+  },
+  {
+    "id": 55,
+    "name": "Fiona Adams",
+    "company": "WebWorks",
+    "email": "fiona.adams@webworks.com",
+    "source": "Email Campaign",
+    "score": 83,
+    "status": "New"
+  },
+  {
+    "id": 56,
+    "name": "Gary Carter",
+    "company": "SecureNet",
+    "email": "gary.carter@securenet.com",
+    "source": "Referral",
+    "score": 96,
+    "status": "Qualified"
+  },
+  {
+    "id": 57,
+    "name": "Hannah Young",
+    "company": "RetailChain",
+    "email": "hannah.young@retailchain.com",
+    "source": "LinkedIn",
+    "score": 78,
+    "status": "Contacted"
+  },
+  {
+    "id": 58,
+    "name": "Ian Cooper",
+    "company": "GlobalSoft",
+    "email": "ian.cooper@globalsoft.com",
+    "source": "Website",
+    "score": 59,
+    "status": "Lost"
+  },
+  {
+    "id": 59,
+    "name": "Jenny Rodriguez",
+    "company": "InnovateTech",
+    "email": "jenny.rodriguez@innovatetech.com",
+    "source": "Conference",
+    "score": 90,
+    "status": "Qualified"
+  },
+  {
+    "id": 60,
+    "name": "Kevin Peterson",
+    "company": "FoodExpress",
+    "email": "kevin.peterson@foodexpress.com",
+    "source": "Email Campaign",
+    "score": 75,
+    "status": "New"
+  },
+  {
+    "id": 61,
+    "name": "Laura Sanchez",
+    "company": "EduCorp",
+    "email": "laura.sanchez@educorp.com",
+    "source": "Referral",
+    "score": 84,
+    "status": "Qualified"
+  },
+  {
+    "id": 62,
+    "name": "Mark Wilson",
+    "company": "FutureSys",
+    "email": "mark.wilson@futuresys.com",
+    "source": "LinkedIn",
+    "score": 68,
+    "status": "Lost"
+  },
+  {
+    "id": 63,
+    "name": "Natalie Harris",
+    "company": "MediaLink",
+    "email": "natalie.harris@medialink.com",
+    "source": "Website",
+    "score": 92,
+    "status": "Qualified"
+  },
+  {
+    "id": 64,
+    "name": "Oliver Jackson",
+    "company": "CreativeHub",
+    "email": "oliver.jackson@creativehub.com",
+    "source": "Conference",
+    "score": 71,
+    "status": "Contacted"
+  },
+  {
+    "id": 65,
+    "name": "Pamela Wright",
+    "company": "GreenCo",
+    "email": "pamela.wright@greenco.com",
+    "source": "Email Campaign",
+    "score": 89,
+    "status": "New"
+  },
+  {
+    "id": 66,
+    "name": "Ryan Miller",
+    "company": "TechSolutions",
+    "email": "ryan.miller@techsolutions.com",
+    "source": "Referral",
+    "score": 80,
+    "status": "Qualified"
+  },
+  {
+    "id": 67,
+    "name": "Sarah Baker",
+    "company": "MediTech",
+    "email": "sarah.baker@meditech.com",
+    "source": "LinkedIn",
+    "score": 64,
+    "status": "Lost"
+  },
+  {
+    "id": 68,
+    "name": "Tom Evans",
+    "company": "AutoLogic",
+    "email": "tom.evans@autologic.com",
+    "source": "Website",
+    "score": 93,
+    "status": "Qualified"
+  },
+  {
+    "id": 69,
+    "name": "Uma Garcia",
+    "company": "LogiPro",
+    "email": "uma.garcia@logipro.com",
+    "source": "Conference",
+    "score": 77,
+    "status": "Contacted"
+  },
+  {
+    "id": 70,
+    "name": "Victor Brown",
+    "company": "DataSys",
+    "email": "victor.brown@datasys.com",
+    "source": "Email Campaign",
+    "score": 86,
+    "status": "Qualified"
+  },
+  {
+    "id": 71,
+    "name": "Will Turner",
+    "company": "FinSol",
+    "email": "will.turner@finsol.com",
+    "source": "Referral",
+    "score": 69,
+    "status": "New"
+  },
+  {
+    "id": 72,
+    "name": "Xena White",
+    "company": "StartUp",
+    "email": "xena.white@startup.com",
+    "source": "LinkedIn",
+    "score": 55,
+    "status": "Lost"
+  },
+  {
+    "id": 73,
+    "name": "Yannick Martin",
+    "company": "TransNet",
+    "email": "yannick.martin@transnet.com",
+    "source": "Website",
+    "score": 97,
+    "status": "Qualified"
+  },
+  {
+    "id": 74,
+    "name": "Zoe Kim",
+    "company": "GlobalSolutions",
+    "email": "zoe.kim@globalsolutions.com",
+    "source": "Conference",
+    "score": 81,
+    "status": "Contacted"
+  },
+  {
+    "id": 75,
+    "name": "Adam Baker",
+    "company": "InnovateCo",
+    "email": "adam.baker@innovateco.com",
+    "source": "Email Campaign",
+    "score": 74,
+    "status": "New"
+  },
+  {
+    "id": 76,
+    "name": "Bella Green",
+    "company": "HealthTech",
+    "email": "bella.green@healthtech.com",
+    "source": "Referral",
+    "score": 88,
+    "status": "Qualified"
+  },
+  {
+    "id": 77,
+    "name": "Chris Adams",
+    "company": "SecureSys",
+    "email": "chris.adams@securesys.com",
+    "source": "LinkedIn",
+    "score": 62,
+    "status": "Lost"
+  },
+  {
+    "id": 78,
+    "name": "Diana Lee",
+    "company": "EduGen",
+    "email": "diana.lee@edugen.com",
+    "source": "Website",
+    "score": 94,
+    "status": "Qualified"
+  },
+  {
+    "id": 79,
+    "name": "Elias Cooper",
+    "company": "MediaCorp",
+    "email": "elias.cooper@mediacorp.com",
+    "source": "Conference",
+    "score": 79,
+    "status": "Contacted"
+  },
+  {
+    "id": 80,
+    "name": "Fay Jackson",
+    "company": "FoodSys",
+    "email": "fay.jackson@foodsys.com",
+    "source": "Email Campaign",
+    "score": 85,
+    "status": "New"
+  },
+  {
+    "id": 81,
+    "name": "George Turner",
+    "company": "BizCorp",
+    "email": "george.turner@bizcorp.com",
+    "source": "Referral",
+    "score": 71,
+    "status": "Contacted"
+  },
+  {
+    "id": 82,
+    "name": "Holly Davis",
+    "company": "FutureTech",
+    "email": "holly.davis@futuretech.com",
+    "source": "LinkedIn",
+    "score": 96,
+    "status": "Qualified"
+  },
+  {
+    "id": 83,
+    "name": "Isaac White",
+    "company": "AutoGenius",
+    "email": "isaac.white@autogenius.com",
+    "source": "Website",
+    "score": 68,
+    "status": "Lost"
+  },
+  {
+    "id": 84,
+    "name": "Jessica King",
+    "company": "TransLogi",
+    "email": "jessica.king@translogi.com",
+    "source": "Conference",
+    "score": 82,
+    "status": "Qualified"
+  },
+  {
+    "id": 85,
+    "name": "Kyle Turner",
+    "company": "ChemCorp",
+    "email": "kyle.turner@chemcorp.com",
+    "source": "Email Campaign",
+    "score": 75,
+    "status": "New"
+  },
+  {
+    "id": 86,
+    "name": "Lisa Evans",
+    "company": "DesignPro",
+    "email": "lisa.evans@designpro.com",
+    "source": "Referral",
+    "score": 89,
+    "status": "Qualified"
+  },
+  {
+    "id": 87,
+    "name": "Michael Harris",
+    "company": "WebLink",
+    "email": "michael.harris@weblink.com",
+    "source": "LinkedIn",
+    "score": 63,
+    "status": "Contacted"
+  },
+  {
+    "id": 88,
+    "name": "Nancy Wilson",
+    "company": "EduWorks",
+    "email": "nancy.wilson@eduworks.com",
+    "source": "Website",
+    "score": 91,
+    "status": "Qualified"
+  },
+  {
+    "id": 89,
+    "name": "Owen Clark",
+    "company": "GreenLife",
+    "email": "owen.clark@greenlife.com",
+    "source": "Conference",
+    "score": 58,
+    "status": "Lost"
+  },
+  {
+    "id": 90,
+    "name": "Patricia Adams",
+    "company": "ITCorp",
+    "email": "patricia.adams@itcorp.com",
+    "source": "Email Campaign",
+    "score": 84,
+    "status": "New"
+  },
+  {
+    "id": 91,
+    "name": "Quincy Miller",
+    "company": "GameSys",
+    "email": "quincy.miller@gamesys.com",
+    "source": "Referral",
+    "score": 93,
+    "status": "Qualified"
+  },
+  {
+    "id": 92,
+    "name": "Rebecca Davis",
+    "company": "HealthPro",
+    "email": "rebecca.davis@healthpro.com",
+    "source": "LinkedIn",
+    "score": 76,
+    "status": "Contacted"
+  },
+  {
+    "id": 93,
+    "name": "Scott Wilson",
+    "company": "GlobalSoft",
+    "email": "scott.wilson@globalsoft.com",
+    "source": "Website",
+    "score": 67,
+    "status": "Lost"
+  },
+  {
+    "id": 94,
+    "name": "Theresa Brown",
+    "company": "TransLink",
+    "email": "theresa.brown@translink.com",
+    "source": "Conference",
+    "score": 90,
+    "status": "Qualified"
+  },
+  {
+    "id": 95,
+    "name": "Ulysses Garcia",
+    "company": "SecureWorks",
+    "email": "ulysses.garcia@secureworks.com",
+    "source": "Email Campaign",
+    "score": 81,
+    "status": "New"
+  },
+  {
+    "id": 96,
+    "name": "Vanessa Turner",
+    "company": "FoodTech",
+    "email": "vanessa.turner@foodtech.com",
+    "source": "Referral",
+    "score": 74,
+    "status": "Contacted"
+  },
+  {
+    "id": 97,
+    "name": "Walter Evans",
+    "company": "DataConnect",
+    "email": "walter.evans@dataconnect.com",
+    "source": "LinkedIn",
+    "score": 95,
+    "status": "Qualified"
+  },
+  {
+    "id": 98,
+    "name": "Xavier Scott",
+    "company": "AutoSol",
+    "email": "xavier.scott@autosol.com",
+    "source": "Website",
+    "score": 65,
+    "status": "Lost"
+  },
+  {
+    "id": 99,
+    "name": "Yasmine Lee",
+    "company": "WebTech",
+    "email": "yasmine.lee@webtech.com",
+    "source": "Conference",
+    "score": 88,
+    "status": "New"
+  },
+  {
+    "id": 100,
+    "name": "Zachary White",
+    "company": "EduNet",
+    "email": "zachary.white@edunet.com",
+    "source": "Email Campaign",
+    "score": 79,
+    "status": "Contacted"
+  },
+  {
+    "id": 101,
+    "name": "Amelia Brown",
+    "company": "InvestCorp",
+    "email": "amelia.brown@investcorp.com",
+    "source": "Referral",
+    "score": 92,
+    "status": "Qualified"
+  },
+  {
+    "id": 102,
+    "name": "Brian Wilson",
+    "company": "LogiTrans",
+    "email": "brian.wilson@logitrans.com",
+    "source": "LinkedIn",
+    "score": 60,
+    "status": "Lost"
+  }
+]
