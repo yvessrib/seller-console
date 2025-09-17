@@ -6,7 +6,18 @@ import { type Lead } from "../../types/app"
 export const columns: ColumnDef<Lead>[] = [
   {
     accessorKey: "id",
-    header: "ID",
+    header: ({ column }) => {
+      return (
+        <Button
+          variant="ghost"
+          className="hover:bg-transparent hover:underline hover:text-white"
+          onClick={() => column.toggleSorting(column.getIsSorted() === "desc")}
+        >
+          Id
+          <ArrowDown className="ml h-4 w-4" />
+        </Button>
+      )
+    },
     size: 20
   },
   {
@@ -39,7 +50,7 @@ export const columns: ColumnDef<Lead>[] = [
           onClick={() => column.toggleSorting(column.getIsSorted() === "desc")}
         >
           Score
-          <ArrowDown className="ml-2 h-4 w-4" />
+          <ArrowDown className="ml h-4 w-4" />
         </Button>
       )
     },

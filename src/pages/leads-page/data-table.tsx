@@ -55,9 +55,30 @@ export function LeadsTable<TData, TValue>({
   data,
   onRowClick
 }: DataTableProps<TData, TValue>) {
-  const [sorting, setSorting] = React.useState<SortingState>([])
-  const [globalFilter, setGlobalFilter] = React.useState<string>("")
+  const [sorting, setSorting] = React.useState<SortingState>(() => {
+    const saved = localStorage.getItem("leads-sorting");
+    return saved ? JSON.parse(saved) : [];
+  });
+  const [globalFilter, setGlobalFilter] = React.useState<string>(() => {
+    return localStorage.getItem("leads-globalFilter") ?? "";
+  });
   const [selectedRowId, setSelectedRowId] = React.useState<string | null>(null)
+
+  const [statusFilter, setStatusFilter] = React.useState<string>(() => {
+    return localStorage.getItem("leads-statusFilter") ?? "all";
+  });
+
+  React.useEffect(() => {
+    localStorage.setItem("leads-globalFilter", globalFilter);
+  }, [globalFilter]);
+
+  React.useEffect(() => {
+    localStorage.setItem("leads-sorting", JSON.stringify(sorting));
+  }, [sorting]);
+
+  React.useEffect(() => {
+    localStorage.setItem("leads-statusFilter", statusFilter);
+  }, [statusFilter]);
 
   const table = useReactTable({
     data,
@@ -75,6 +96,10 @@ export function LeadsTable<TData, TValue>({
     globalFilterFn
   })
 
+  React.useEffect(() => {
+    table.getColumn("status")?.setFilterValue(statusFilter === "all" ? undefined : statusFilter);
+  }, [statusFilter, table]);
+
   return (
     <div>
       <div className="flex items-center py-4">
@@ -85,8 +110,10 @@ export function LeadsTable<TData, TValue>({
         />
 
         <Select
-          onValueChange={(value) => table.getColumn("status")?.setFilterValue(value === "all" ? undefined : value)}
-          defaultValue="all"
+          // onValueChange={(value) => table.getColumn("status")?.setFilterValue(value === "all" ? undefined : value)}
+          // defaultValue="all"
+          value={statusFilter}
+          onValueChange={(value) => setStatusFilter(value)}
         >
           <SelectTrigger className="ml-2">
             <SelectValue>Status</SelectValue>
