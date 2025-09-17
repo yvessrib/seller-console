@@ -40,7 +40,6 @@ export function OpportunityForm({ lead, onCreate, onCancel }: OpportunityFormPro
   })
 
   const onSubmit = (data: OpportunityFormData) => {
-    if (!lead?.id) return console.log("Lead ID is missing")
     onCreate({ ...data })
     reset()
   }

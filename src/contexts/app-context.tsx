@@ -2,6 +2,7 @@
 import { createContext, useContext, useEffect, useState } from "react"
 import fetchLeads from "../services/fakeApi"
 import { type Lead, type Opportunity } from "../types/app"
+import { toast } from "sonner"
 
 type appContextType = {
   leads: Lead[]
@@ -49,6 +50,8 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
       ...opportunity
     }
 
+    toast.success("Opportunity created", { position: "top-right", duration: 3000, dismissible: true })
+
     setOpportunities((prev) => {
       const updated = [...prev, addOpportunity]
       localStorage.setItem("opportunities", JSON.stringify(updated))
@@ -62,6 +65,8 @@ export const AppProvider = ({ children }: { children: React.ReactNode }) => {
       localStorage.setItem("leads", JSON.stringify(newLeads))
       return newLeads
     })
+
+    toast.success("Lead updated", { position: "top-right", duration: 3000, dismissible: true })
   }
 
   return (

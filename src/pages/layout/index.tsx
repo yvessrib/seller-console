@@ -1,6 +1,7 @@
 import { ChevronRight } from "lucide-react";
 import { AppSidebar } from "../../components/internal/appSidebar";
 import { SidebarProvider, SidebarTrigger } from "../../components/ui/sidebar";
+import { Toaster } from "sonner";
 
 interface LayoutProps {
   children?: React.ReactNode,
@@ -22,6 +23,7 @@ export function LayoutPage({ children, pageTitle }: LayoutProps) {
             </div>
           </div>
           {children}
+          <Toaster />
       </div>
     </SidebarProvider>
   )

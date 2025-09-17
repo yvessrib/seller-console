@@ -48,16 +48,21 @@ export function AppSidebar() {
         <SidebarGroup>
           <SidebarGroupContent>
             <SidebarMenu className="space-y-2 mt-4">
-                {items.map((item) => (
-                  <SidebarMenuItem key={item.title} className="text-zinc-900 text-2xl">
-                    <SidebarMenuButton className="hover:bg-emerald-700 hover:text-white transition-all" asChild>
-                      <a href={item.href}>
-                        <item.icon className="h-6 w-6" />
-                        <span className="text-base">{item.title}</span>
-                      </a>
-                    </SidebarMenuButton>
-                  </SidebarMenuItem>
-                ))}
+                {items.map((item) => {
+                  const isActive = window.location.pathname === item.href;
+                  return (
+                    <SidebarMenuItem key={item.title} className="text-zinc-900 text-2xl">
+                      <SidebarMenuButton 
+                        className={`hover:bg-emerald-700 hover:text-white transition-all  ${isActive ? "bg-emerald-700 text-white" : "" }`} asChild
+                        >
+                        <a href={item.href}>
+                          <item.icon className="h-6 w-6" />
+                          <span className="text-base">{item.title}</span>
+                        </a>
+                      </SidebarMenuButton>
+                    </SidebarMenuItem>
+                  )
+                })}
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
