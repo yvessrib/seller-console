@@ -1,19 +1,23 @@
-import { Sheet, SheetHeader, SheetContent, SheetTitle } from "../ui/sheet";
+import { Sheet, SheetHeader, SheetContent, SheetTitle, SheetFooter } from "../ui/sheet";
 import { type Lead } from "../../pages/leads-page/columns";
 import { LeadForm } from "./leadForm";
+import { Button } from "../ui/button";
+import { ArrowRight } from "lucide-react";
 
 interface LeadsSheetProps {
   lead: Lead | null,
   isOpen: boolean,
   onOpenChange: (open: boolean) => void,
-  onSave: (update: Lead) => void
+  onSave: (update: Lead) => void,
+  onConvert: () => void
 }
 
 export function LeadsSheet({
   lead,
   isOpen,
   onOpenChange,
-  onSave
+  onSave,
+  onConvert
 }: LeadsSheetProps) {
   return (
     <Sheet open={isOpen} onOpenChange={onOpenChange}>
@@ -40,6 +44,19 @@ export function LeadsSheet({
             />
           </div>
         </div>
+
+        <SheetFooter className="flex">
+          <Button 
+            variant="outline" 
+            className="self-end border-2 w-fit hover:bg-emerald-700 hover:text-white" 
+            onClick={() => onConvert()}
+          >
+            <div>
+              <span>Convert Lead</span>
+              <ArrowRight className="inline ml-2 mb-1" size={14} />
+            </div>
+          </Button>
+        </SheetFooter>
       </SheetContent>
     </Sheet>
   )

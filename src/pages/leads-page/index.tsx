@@ -1,39 +1,51 @@
-import { useEffect, useState} from "react";
+import { useState } from "react";
 import { columns, type Lead } from "./columns";
 import { DataTable } from "./data-table";
-import  fetchLeads  from "../../services/fakeApi";
 import { LeadsSheet } from "../../components/internal/leadsSheet";
+import { OpportunitySheet  } from "../../components/internal/opportunitySheet";
+import { useAppContext } from "../../contexts/app-context";
 
 export default function LeadsPage() {
 
-  const [leads, setLeads] = useState<Lead[]>([])
   const [selectedLead, setSelectedLead] = useState<Lead | null>(null)
-  const [isSheetOpen, setIsSheetOpen] = useState(false)
+  const [isLeadSheetOpen, setIsLeadSheetOpen] = useState(false)
+  const [isOpportunitySheetOpen, setIsOpportunitySheetOpen] = useState(false)
 
-  useEffect(() => {
-    fetchLeads()
-      .then(setLeads)
-  }, [])
-
+  const { leads, updateLead, createOpportunity } = useAppContext()
+  
   const handleSave = (updated: Lead) => {
-    setLeads((prev) =>
-      prev.map((lead) => (lead.id === updated.id ? updated : lead))
-    )
-    setIsSheetOpen(false)
+    updateLead(updated)
+    setIsLeadSheetOpen(false)
+  }
+
+  const handleConvertLead = () => {
+    setIsLeadSheetOpen(false)
+    setIsOpportunitySheetOpen(true)
   }
 
   return (
     <div>
       <DataTable columns={columns} data={leads} onRowClick={(lead) => {
         setSelectedLead(lead)
-        setIsSheetOpen(true)
+        setIsLeadSheetOpen(true)
       }}/>
 
       <LeadsSheet
         lead={selectedLead!}
-        isOpen={isSheetOpen}
-        onOpenChange={setIsSheetOpen}
+        isOpen={isLeadSheetOpen}
+        onOpenChange={setIsLeadSheetOpen}
         onSave={handleSave}
+        onConvert={handleConvertLead}
+      />
+
+      <OpportunitySheet
+        lead={selectedLead!}
+        isOpen={isOpportunitySheetOpen}
+        onOpenChange={setIsOpportunitySheetOpen}
+        onSave={(opportunity) => {
+          createOpportunity(opportunity)
+          setIsOpportunitySheetOpen(false)
+        }}
       />
     </div>
   )
