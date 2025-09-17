@@ -29,7 +29,7 @@ import {
 
 import { Input } from "../../components/ui/input"
 
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { Button } from "../../components/ui/button"
 
 interface DataTableProps<TData, TValue> {
@@ -55,28 +55,28 @@ export function LeadsTable<TData, TValue>({
   data,
   onRowClick
 }: DataTableProps<TData, TValue>) {
-  const [sorting, setSorting] = React.useState<SortingState>(() => {
+  const [sorting, setSorting] = useState<SortingState>(() => {
     const saved = localStorage.getItem("leads-sorting");
     return saved ? JSON.parse(saved) : [];
   });
-  const [globalFilter, setGlobalFilter] = React.useState<string>(() => {
+  const [globalFilter, setGlobalFilter] = useState<string>(() => {
     return localStorage.getItem("leads-globalFilter") ?? "";
   });
-  const [selectedRowId, setSelectedRowId] = React.useState<string | null>(null)
+  const [selectedRowId, setSelectedRowId] = useState<string | null>(null)
 
-  const [statusFilter, setStatusFilter] = React.useState<string>(() => {
+  const [statusFilter, setStatusFilter] = useState<string>(() => {
     return localStorage.getItem("leads-statusFilter") ?? "all";
   });
 
-  React.useEffect(() => {
+  useEffect(() => {
     localStorage.setItem("leads-globalFilter", globalFilter);
   }, [globalFilter]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     localStorage.setItem("leads-sorting", JSON.stringify(sorting));
   }, [sorting]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     localStorage.setItem("leads-statusFilter", statusFilter);
   }, [statusFilter]);
 
