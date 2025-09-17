@@ -13,12 +13,12 @@ export function LayoutPage({ children, pageTitle }: LayoutProps) {
       <AppSidebar />
       <div className="flex-1 overflow-x-auto px-3 h-screen">
           <div className="flex gap-3 items-center pt-4">
-            <SidebarTrigger className="pt-1" />
+            <SidebarTrigger className="pt-1 hover:text-emerald-700" />
             <div>
               <span className="pr-5">|</span>
               <span className="text-base">Seller Console</span>
               <ChevronRight className="inline mx-2 mb-1" size={14} />
-              <span className="text-base font-bold">{pageTitle}</span>
+              <span className="text-base font-bold text-emerald-700">{pageTitle}</span>
             </div>
           </div>
           {children}

@@ -35,6 +35,7 @@ import { Button } from "../../components/ui/button"
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[],
   data: TData[]
+  onRowClick?: (row: TData) => void
 }
 
 const globalFilterFn = <TData,>(
@@ -51,10 +52,12 @@ const globalFilterFn = <TData,>(
 
 export function DataTable<TData, TValue>({
   columns,
-  data
+  data,
+  onRowClick
 }: DataTableProps<TData, TValue>) {
   const [sorting, setSorting] = React.useState<SortingState>([])
   const [globalFilter, setGlobalFilter] = React.useState<string>("")
+  const [selectedRowId, setSelectedRowId] = React.useState<string | null>(null)
 
   const table = useReactTable({
     data,
@@ -67,7 +70,7 @@ export function DataTable<TData, TValue>({
     getPaginationRowModel: getPaginationRowModel(),
     state: {
       sorting,
-      globalFilter
+      globalFilter,
     },
     globalFilterFn
   })
@@ -104,7 +107,7 @@ export function DataTable<TData, TValue>({
               <TableRow key={headerGroups.id}>
                 {headerGroups.headers.map((header) => {
                   return (
-                    <TableHead key={header.id} style={{ width: header.getSize() }}>
+                    <TableHead className="bg-emerald-700 text-white" key={header.id} style={{ width: header.getSize() }}>
                       {header.isPlaceholder
                         ? null
                         : flexRender(
@@ -122,7 +125,12 @@ export function DataTable<TData, TValue>({
               table.getRowModel().rows.map((row) => (
                 <TableRow
                   key={row.id}
-                  data-state={row.getIsSelected() && "selected"}>
+                  onClick={() => {
+                    onRowClick?.(row.original);
+                    setSelectedRowId(row.id);
+                  }}
+                  data-state={row.getIsSelected() && "selected"}
+                  className={`hover:cursor-pointer hover:bg-emerald-200 ${selectedRowId === row.id ? "bg-emerald-200" : ""}`}>
                   {row.getVisibleCells().map((cell) => (
                     <TableCell key={cell.id}>
                       {flexRender(cell.column.columnDef.cell, cell.getContext())}

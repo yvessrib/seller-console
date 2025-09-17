@@ -44,6 +44,7 @@ export const columns: ColumnDef<Lead>[] = [
       return (
         <Button
           variant="ghost"
+          className="hover:bg-transparent hover:underline hover:text-white"
           onClick={() => column.toggleSorting(column.getIsSorted() === "desc")}
         >
           Score

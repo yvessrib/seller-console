@@ -3,6 +3,11 @@
 
 @custom-variant dark (&:is(.dark *));
 
+::selection {
+  background-color: var(--color-emerald-700) /* oklch(50.8% 0.118 165.612) */;
+  color: var(--color-white) /* oklch(100% 0 0) */;
+}
+
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
