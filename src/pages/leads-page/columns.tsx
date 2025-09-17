@@ -1,0 +1,62 @@
+import type { ColumnDef } from "@tanstack/react-table"
+import { ArrowDown } from "lucide-react"
+import { Button } from "../../components/ui/button"
+
+export type Lead = {
+  id: number,
+  name: string,
+  company: string,
+  email: string,
+  source: string,
+  score: number,
+  status: string
+}
+
+export const columns: ColumnDef<Lead>[] = [
+  {
+    accessorKey: "id",
+    header: "ID",
+    size: 20
+  },
+  {
+    accessorKey: "name",
+    header: "Name",
+    size: 200
+  },
+  {
+    accessorKey: "company",
+    header: "Company",
+    size: 150
+  },
+  {
+    accessorKey: "email",
+    header: "Email",
+    size: 250
+  },
+  {
+    accessorKey: "source",
+    header: "Source",
+    size: 120
+  },
+  {
+    accessorKey: "score",
+    header: ({ column }) => {
+      return (
+        <Button
+          variant="ghost"
+          onClick={() => column.toggleSorting(column.getIsSorted() === "desc")}
+        >
+          Score
+          <ArrowDown className="ml-2 h-4 w-4" />
+        </Button>
+      )
+    },
+    size: 40
+  },
+  {
+    accessorKey: "status",
+    header: "Status",
+    size: 100,
+    filterFn: "equalsString"
+  }
+]

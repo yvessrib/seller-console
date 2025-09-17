@@ -6,7 +6,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<LayoutPage children={<LeadsPage />} />} />
+        <Route path="/" element={<LayoutPage children={<LeadsPage />} pageTitle="Leads" />} />
       </Routes>
     </BrowserRouter>
   )
