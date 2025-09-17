@@ -1,7 +1,13 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { LayoutPage } from "./pages/layout";
+import LeadsPage from "./pages/leads-page";
+
 export default function App() {
   return (
-    <div>
-      <button className="text-white px-4 sm:px-8 py-2 sm:py-3 bg-sky-700 hover:bg-sky-800">Submit</button>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LayoutPage children={<LeadsPage />} />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
