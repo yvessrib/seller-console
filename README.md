@@ -27,8 +27,8 @@ Built with **React + Tailwind CSS** and follows the requirements of the coding c
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/mini-seller-console.git
-cd mini-seller-console
+git clone https://github.com/yvessrib/seller-console
+cd seller-console
 ```
 
 ### 2️⃣ Install Dependencies 
